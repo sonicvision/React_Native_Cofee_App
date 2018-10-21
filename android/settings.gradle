@@ -1,0 +1,3 @@
+rootProject.name = 'React_Native_Cofee_App'
+
+include ':app'
