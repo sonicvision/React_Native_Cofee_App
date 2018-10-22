@@ -1,13 +1,13 @@
-import Coffee from "../Containers/Coffee";
+import Home from "../Containers/Home";
 
 import { StackNavigator } from "react-navigation";
 
 const StackApp = StackNavigator(
   {
-    Coffee: { screen: Coffee }
+    Home: { screen: Home }
   },
   {
-    initialRouteName: "Coffee"
+    initialRouteName: "Home"
   }
 );
 
