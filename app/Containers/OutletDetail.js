@@ -28,6 +28,10 @@ const OutletDetail = ({ navigation }) => {
           </Text>
         </View>
       </View>
+      <Text style={styles.address}>
+        <Icon name="map-pin" size={20} color="#d7a05b" />
+        {outlet.location.display_address.map(item => ` ${item} `)}
+      </Text>
       <View style={styles.innerView}>
         {outlet.is_closed ? (
           <Text style={styles.open}>CLOSED</Text>
@@ -37,7 +41,7 @@ const OutletDetail = ({ navigation }) => {
         <Text style={styles.price}>{String(outlet.price)}</Text>
       </View>
       <TouchableOpacity style={styles.callView}>
-        <Icon name="phone" size={35} color="white" />
+        <Icon name="phone" size={35} color="#896038" />
         <Text style={styles.phoneNumber}> Click to View</Text>
       </TouchableOpacity>
       <View pointerEvents="none">

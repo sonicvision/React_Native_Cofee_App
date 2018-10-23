@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
   innerView: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 10,
-    padding: 5
+    marginTop: 10
   },
   mapView: {
     height: 250
@@ -45,9 +44,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     padding: 3
   },
+  address: {
+    fontSize: 18,
+    padding: 5
+  },
   open: {
-    backgroundColor: "green",
-    color: "white",
+    color: "green",
     fontWeight: "bold",
     fontSize: 20,
     alignItems: "center",
@@ -72,12 +74,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#896038",
     borderRadius: 25,
-    margin: 20
+    borderColor: "#896038",
+    borderWidth: 2,
+    margin: 10,
+    shadowColor: "grey",
+    shadowOpacity: 1,
+    shadowOffset: { width: 2, height: 2 }
   },
   phoneNumber: {
-    color: "white",
+    color: "#896038",
     fontSize: 30,
     fontWeight: "bold"
   }
