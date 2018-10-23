@@ -3,7 +3,7 @@ import Coffee from "../Components/Coffee";
 import Map from "../Components/Map";
 import actions from "../Actions/coffee";
 import { connect } from "react-redux";
-import { View } from "react-native";
+import { View, Button } from "react-native";
 import styles from "./Styles/HomeStyles";
 import ModeSwitch from "../Components/ModeSwitch";
 
@@ -19,11 +19,16 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         {this.props.isMapModeSelected ? (
-          <Map style={styles.map} outlets={this.props.outlets} />
+          <Map
+            style={styles.map}
+            outlets={this.props.outlets}
+            navigation={this.props.navigation}
+          />
         ) : (
           <Coffee
             outlets={this.props.outlets}
             isLoading={this.props.isLoading}
+            navigation={this.props.navigation}
           />
         )}
         <ModeSwitch

@@ -1,9 +1,7 @@
 import React from "react";
-import { Text, View } from "react-native";
-import MapView, { Marker } from "react-native-maps";
+import MapView from "react-native-maps";
 import OutletMarker from "./OutletMarker";
-import styles from "../Containers/Styles/HomeStyles";
-const Map = ({ outlets }) => (
+const Map = ({ outlets, navigation }) => (
   <MapView
     style={{ flex: 1 }}
     initialRegion={{
@@ -14,7 +12,7 @@ const Map = ({ outlets }) => (
     }}
   >
     {outlets.map(outlet => (
-      <OutletMarker outlet={outlet} />
+      <OutletMarker outlet={outlet} navigation={navigation} />
     ))}
   </MapView>
 );

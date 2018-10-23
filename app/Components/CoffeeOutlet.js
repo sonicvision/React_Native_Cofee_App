@@ -1,9 +1,12 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, Image, TouchableOpacity } from "react-native";
 import styles from "./Styles/CoffeeOutletStyles";
 
-const CoffeeOutlet = ({ outlet }) => (
-  <View style={styles.container}>
+const CoffeeOutlet = ({ outlet, navigation }) => (
+  <TouchableOpacity
+    style={styles.container}
+    onPress={() => navigation.navigate("OutletDetail", outlet)}
+  >
     <Image
       style={styles.image}
       source={{
@@ -11,7 +14,7 @@ const CoffeeOutlet = ({ outlet }) => (
       }}
     />
     <Text style={styles.name}>{outlet.name}</Text>
-  </View>
+  </TouchableOpacity>
 );
 
 export default CoffeeOutlet;
