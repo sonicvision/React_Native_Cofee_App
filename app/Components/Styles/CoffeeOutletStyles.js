@@ -2,31 +2,64 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "column",
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "stretch",
-    shadowColor: "grey",
-    shadowOpacity: 1,
-    shadowOffset: { width: 2, height: 2 },
     padding: 10
   },
   image: {
+    height: 100,
+    width: 100,
+    borderRadius: 10
+  },
+  infoContainer: {
     flex: 1,
-    height: 250,
-    flexDirection: "row",
-    marginBottom: -30
+    padding: 10,
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "flex-start"
   },
   name: {
     flex: 1,
     flexDirection: "row",
     textAlign: "left",
-    color: "white",
     padding: 5,
     fontSize: 20,
+    fontWeight: "800",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "black",
-    opacity: 0.8
+    opacity: 0.8,
+    color: "black"
+  },
+  review: {
+    flex: 1,
+    color: "brown"
+  },
+  rating: {
+    flex: 1,
+    color: "#d7a05b",
+    fontSize: 20,
+    fontWeight: "bold",
+    padding: 3,
+    justifyContent: "flex-end"
+  },
+  innerView: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center"
+  },
+  open: {
+    backgroundColor: "green",
+    color: "white",
+    fontWeight: "bold",
+    alignItems: "center",
+    justifyContent: "flex-start"
+  },
+  closed: {
+    backgroundColor: "red",
+    color: "white",
+    fontWeight: "bold"
   }
 });
 

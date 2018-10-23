@@ -12,6 +12,11 @@ class Home extends Component {
     super(props);
     this.state = {};
   }
+
+  static navigationOptions = {
+    title: "SELECT YOUR CUP",
+    headerTitleStyle: { textAlign: "center", alignSelf: "center" }
+  };
   componentDidMount() {
     this.props.fetchOutlets();
   }

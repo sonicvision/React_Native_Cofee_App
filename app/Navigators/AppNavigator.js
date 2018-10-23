@@ -9,7 +9,16 @@ const StackApp = StackNavigator(
     OutletDetail: { screen: OutletDetail }
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: "Home",
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: "#896038"
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold"
+      }
+    }
   }
 );
 

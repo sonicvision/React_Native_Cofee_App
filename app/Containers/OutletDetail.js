@@ -1,11 +1,13 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, TouchableOpacity } from "react-native";
 import styles from "./Styles/OutletDetailStyles";
 import MapView from "react-native-maps";
 import OutletMarker from "../Components/OutletMarker";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 const OutletDetail = ({ navigation }) => {
   const outlet = navigation.state.params;
+
   return (
     <View style={styles.container}>
       <Image
@@ -15,11 +17,29 @@ const OutletDetail = ({ navigation }) => {
         }}
       />
       <Text style={styles.name}>{outlet.name}</Text>
-      <Text>{outlet.rating} Stars</Text>
-      <Text>{outlet.review_count} Reviews</Text>
-      <Text>Call {outlet.display_phone}</Text>
-      <Text>{outlet.is_closed ? "CLOSED" : "OPEN"}</Text>
-      <Text>Price: {String(outlet.price)}</Text>
+      <View style={styles.innerView}>
+        <Text style={styles.review}>{outlet.review_count} Reviews</Text>
+        <View
+          style={{ flex: 1, justifyContent: "flex-end", flexDirection: "row" }}
+        >
+          <Text style={styles.rating}>
+            {outlet.rating + " "}
+            <Icon name="star" size={20} color="#d7a05b" />
+          </Text>
+        </View>
+      </View>
+      <View style={styles.innerView}>
+        {outlet.is_closed ? (
+          <Text style={styles.open}>CLOSED</Text>
+        ) : (
+          <Text style={styles.open}>OPEN</Text>
+        )}
+        <Text style={styles.price}>{String(outlet.price)}</Text>
+      </View>
+      <TouchableOpacity style={styles.callView}>
+        <Icon name="phone" size={35} color="white" />
+        <Text style={styles.phoneNumber}> Click to View</Text>
+      </TouchableOpacity>
       <View pointerEvents="none">
         <MapView
           style={styles.mapView}

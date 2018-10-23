@@ -2,8 +2,17 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   button: {
+    borderWidth: 1,
+    borderColor: "rgba(0,0,0,0.2)",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 70,
     position: "absolute",
-    justifyContent: "flex-end"
+    bottom: 50,
+    right: 10,
+    height: 70,
+    backgroundColor: "#896038",
+    borderRadius: 100
   }
 });
 

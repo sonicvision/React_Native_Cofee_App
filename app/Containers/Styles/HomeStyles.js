@@ -5,9 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "stretch",
-    shadowColor: "grey",
-    shadowOpacity: 1
+    alignItems: "stretch"
   },
   map: {
     flex: 1

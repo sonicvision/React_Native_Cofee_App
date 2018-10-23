@@ -2,7 +2,7 @@ import types from "../Types/coffee";
 
 const initialState = {
   isLoading: true,
-  isMapModeSelected: false,
+  isMapModeSelected: true,
   outlets: []
 };
 

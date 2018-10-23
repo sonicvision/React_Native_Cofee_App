@@ -4,7 +4,9 @@ import { Image } from "react-native";
 
 const OutletMarker = ({ outlet, navigation }) => (
   <Marker
-    onPress={() => navigation.navigate("OutletDetail", outlet)}
+    onPress={() =>
+      navigation.navigate("OutletDetail", outlet, { title: "Hello" })
+    }
     coordinate={outlet.coordinates}
     title={outlet.name}
     description={outlet.name}

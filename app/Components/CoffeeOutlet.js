@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, Image, TouchableOpacity } from "react-native";
+import { Text, Image, View, TouchableOpacity } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "./Styles/CoffeeOutletStyles";
 
 const CoffeeOutlet = ({ outlet, navigation }) => (
@@ -13,7 +14,22 @@ const CoffeeOutlet = ({ outlet, navigation }) => (
         uri: outlet.image_url
       }}
     />
-    <Text style={styles.name}>{outlet.name}</Text>
+    <View style={styles.infoContainer}>
+      <Text style={styles.name}>{outlet.name}</Text>
+
+      <View style={styles.innerView}>
+        <Text style={styles.review}>{outlet.review_count} Reviews</Text>
+        <Text style={styles.rating}>
+          {outlet.rating + " "}
+          <Icon name="star" size={20} color="#d7a05b" />
+        </Text>
+      </View>
+      {outlet.is_closed ? (
+        <Text style={styles.open}>CLOSED</Text>
+      ) : (
+        <Text style={styles.open}>OPEN</Text>
+      )}
+    </View>
   </TouchableOpacity>
 );
 

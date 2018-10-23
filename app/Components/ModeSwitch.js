@@ -5,12 +5,7 @@ import styles from "./Styles/ModeSwitchStyles";
 
 const ModeSwitch = ({ displayModeChanged, isMapModeSelected }) => (
   <TouchableOpacity style={styles.button} onPress={() => displayModeChanged()}>
-    <Icon
-      style={{ flex: 1 }}
-      name={isMapModeSelected ? "list" : "map"}
-      size={30}
-      color="#900"
-    />
+    <Icon name={isMapModeSelected ? "list" : "map"} size={30} color="white" />
   </TouchableOpacity>
 );
 
