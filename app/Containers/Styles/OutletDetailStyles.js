@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
   },
   phoneNumber: {
     color: "#896038",
-    fontSize: 30,
-    fontWeight: "bold"
+    fontSize: 25,
+    fontWeight: "normal"
   }
 });
 

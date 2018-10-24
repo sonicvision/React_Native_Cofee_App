@@ -53,8 +53,8 @@ const OutletDetail = ({ navigation }) => {
         <Text style={styles.price}>{String(outlet.price)}</Text>
       </View>
       <TouchableOpacity style={styles.callView}>
-        <Icon name="phone" size={35} color="#896038" />
-        <Text style={styles.phoneNumber}> Click to View</Text>
+        <Icon name="phone" size={30} color="#896038" />
+        <Text style={styles.phoneNumber}> {outlet.display_phone}</Text>
       </TouchableOpacity>
       <View pointerEvents="none">
         <MapView
