@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: 70,
     position: "absolute",
-    bottom: 50,
+    bottom: 20,
     right: 10,
     height: 70,
     backgroundColor: "#896038",

@@ -2,7 +2,7 @@ import { put, call } from "redux-saga/effects";
 import types from "../Types/coffee";
 import * as Api from "../Services/Api";
 
-export function* fetchOutlets(action) {
+export function* fetchOutlets() {
   try {
     yield put({ type: types.OUTLET_FETCH_PENDING });
     const json = yield call(Api.fetchOutlets);

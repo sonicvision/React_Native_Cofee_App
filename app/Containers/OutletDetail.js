@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Animated,
+  ScrollView
+} from "react-native";
 import styles from "./Styles/OutletDetailStyles";
 import MapView from "react-native-maps";
 import OutletMarker from "../Components/OutletMarker";
@@ -7,9 +14,14 @@ import Icon from "react-native-vector-icons/FontAwesome";
 
 const OutletDetail = ({ navigation }) => {
   const outlet = navigation.state.params;
+  let scaleValue = new Animated.Value(0);
 
+  const cardScale = scaleValue.interpolate({
+    inputRange: [0, 0.5, 1],
+    outputRange: [1, 1.1, 1.2]
+  });
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Image
         style={styles.image}
         source={{
@@ -56,7 +68,7 @@ const OutletDetail = ({ navigation }) => {
           <OutletMarker outlet={outlet} />
         </MapView>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

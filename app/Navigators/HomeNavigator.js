@@ -3,7 +3,7 @@ import OutletDetail from "../Containers/OutletDetail";
 
 import { StackNavigator } from "react-navigation";
 
-const StackApp = StackNavigator(
+const HomeNavigator = StackNavigator(
   {
     Home: { screen: Home },
     OutletDetail: { screen: OutletDetail }
@@ -22,4 +22,4 @@ const StackApp = StackNavigator(
   }
 );
 
-export default StackApp;
+export default HomeNavigator;

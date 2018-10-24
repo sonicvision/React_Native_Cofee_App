@@ -9,12 +9,12 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
 import store from "../Store";
-import AppNavigator from "../Navigators/AppNavigator";
+import TabNavigator from "../Navigators";
 export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <AppNavigator />
+        <TabNavigator />
       </Provider>
     );
   }
