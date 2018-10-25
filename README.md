@@ -1,10 +1,15 @@
-## Welcome to GitHub Pages
+## App for coffee lovers. Demonstrates all the basic concepts of React Native
 
-You can use the [editor on GitHub](https://github.com/sonicvision/React_Native_Coffee_App/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### The app demonstrates the use of following:-
+1) React Native
+2) Redux
+3) Redux Saga
+4) Native iOS bridge
+5) React Native Apps
+6) Stack and Tab Navigation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Few Screenshots are below
 
-### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
